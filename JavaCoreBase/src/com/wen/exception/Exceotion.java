@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 
-
+@SuppressWarnings("all")
 
 public class Exceotion {
 	
