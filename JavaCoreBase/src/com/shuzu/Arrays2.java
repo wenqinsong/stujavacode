@@ -1,6 +1,6 @@
 package com.shuzu;
 
-import java.util.Scanner;
+
 
 public class Arrays2 {
 
