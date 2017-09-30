@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+function get_text() {
+	alert($('#txt').val());
+}
+function tagSelector() {
+	$("div").css('border','1px soild red');
+	
+}
+
+</script>
+
+<input type="text" id="txt" />
+<button type="button" onclick="get_text();">Go</button>
+<hr />
+<div style="width: 100px;height: 100px;">
+<span>我是一个div</span> 
+</div>
+
+<input type="button" onclick="tagSelector()" value="标签选择器">
+</body>
+</html>
