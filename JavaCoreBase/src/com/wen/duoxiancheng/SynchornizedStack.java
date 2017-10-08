@@ -2,7 +2,7 @@ package com.wen.duoxiancheng;
 
 public class SynchornizedStack {
 	private int index = 0;
-	private char[] data = new char[6];
+	private char[] data = new char[26];
 
 	public synchronized void push(char c) {
 		while (index == data.length) {
@@ -47,7 +47,7 @@ class Producer implements Runnable {
 
 	@Override
 	public void run() {
-		for (int i = 0; i < 20; i++) {
+		for (int i = 0; i < 27; i++) {
 			char c = (char) (Math.random() * 26 + 'A');
 			stack.push(c);
 			System.out.println("生产:" + c);
@@ -73,7 +73,7 @@ class Consumer implements Runnable {
 
 	@Override
 	public void run() {
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 27; i++) {
 			char c = stack.pop();
 			System.out.println("消费：" + c);
 			try {
