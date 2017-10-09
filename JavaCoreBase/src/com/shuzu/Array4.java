@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class Array4 {
 
 	public static void main(String[] args) {
-		int[] array = new int[] {1,7,5,6,3,8,9};
+		int[] array = new int[] {11,15,13,19,17,23,21};
 		Arrays.sort(array);
 		
 		int zj;
