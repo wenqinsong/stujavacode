@@ -1,24 +1,32 @@
 package com.wen.duoxiancheng;
 
-import java.io.FileNotFoundException;
-import java.io.PrintStream;
+
+import java.io.FileOutputStream;
+
 
 public class ChengFa {
 
-	public void display() throws FileNotFoundException {
+	public void display() throws Exception {
 		
-		PrintStream ps = new PrintStream("/home/cent/Downloads/abc.txt");
-		System.setOut(ps);
-		
+		FileOutputStream fos = new FileOutputStream("/home/cent/Downloads/abc.txt");
+		String s=null;
 		for(int i=1;i<=9;i++) {
 			for (int j=1;j<=i;j++) {
-				System.out.print(i+"*"+j+"="+(i*j)+"\t");
+				if (i == j) {
+					s=(i+"*"+j+"="+i*j+"\t"+"\n");
+					System.out.print(s);
+					
+				}else {
+					s=(i+"*"+j+"="+i*j+"\t");
+					System.out.print(s);
+				}
 				
+				fos.write(s.getBytes());
 			}
-			System.out.println();
 			
 		}
-		
+		fos.close();
+		System.out.println("录入成功！");
 			
 
 	}
