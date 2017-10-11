@@ -1,8 +1,5 @@
 package com.wen.duoxiancheng;
 
-
-
-
 import java.lang.reflect.Method;
 
 
@@ -12,14 +9,14 @@ import java.lang.reflect.Method;
 public class TestCf {
 
 	public static void main(String[] args)  throws Exception{
-		Myrunnable run = new Myrunnable();
+		MyTest run = new MyTest();
 		Thread thread = new Thread(run);
 		thread.start();
 		
 		
 	}
 }
-class Myrunnable implements Runnable {
+class MyTest implements Runnable {
 
 	public void run() {
 		
