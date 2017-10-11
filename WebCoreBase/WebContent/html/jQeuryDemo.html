@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p>Hello</p>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+function get_text() {
+	alert($('#txt').val());
+}
+function tagSelector() {
+	$("div").css('border','1px soild red');
+	
+}
+function showR() {
+	var display = $('#d01')[0].style.display;
+	if ( display ||display == "none") {
+		$('#d01').show(3000, function() {
+			$('#btn4').val("隐藏Div");
+		});
+	} else {
+		$('#d01').hide(2000, function() {
+			$('#btn4').val("显示Div");
+		});
+
+	}
+}
+
+
+
+</script>
+<script type="text/javascript">
+    $(function () {
+        $('#btn').bind('click', function () {
+            $(this).attr("disabled", "true");
+        })
+    });
+</script>
+<div id="d01"  style="width: 150px;height: 200px;color: red">
+我是一个元素
+</div>
+
+<input id="btn4" type="button" value="隐藏" onclick="showR()" />
+
+<input id="btn" type="button" value="点我" />
+
+<input type="text" id="txt" />
+<button type="button" onclick="get_text();">Go</button>
+<hr />
+<div style="width: 100px;height: 100px;">
+<span>我是一个div</span> 
+</div>
+<form id="my_form">
+<input type="text"/>
+<input type="radio"/>
+<input type="radio" checked="checked"/>
+<input type="checkbox"/>
+<input type="checkbox" checked="checked"/>
+</form>
+<script type="text/javascript">
+console.log($('#my_form :input:checked'));
+</script>
+
+<select id="sel" multiple="multiple">
+    <option value="0">苹果</option>
+    <option value="1" selected="selected">桔子</option>
+    <option value="2">荔枝</option>
+    <option value="3" selected="selected">葡萄</option>
+    <option value="4">香蕉</option>
+</select>
+<script type="text/javascript">
+console.log($('#sel :selected'));
+</script>
+
+
+<input type="button" onclick="tagSelector()" value="标签选择器">
+</body>
+</html>
