@@ -25,5 +25,16 @@
 	}
 	
 	%>
+	<br/>
+	<% 
+	int a=6,b=5;
+	out.println(a+b);
+	%>
+	<br/>
+	<%
+	
+	%>
+	
+	
 </body>
 </html>
